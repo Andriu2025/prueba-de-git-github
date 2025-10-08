@@ -17,3 +17,4 @@ document.getElementById("boton1").addEventListener("click", function () {
         document.getElementById("resultado").innerText = "⚠️ Ingrese un producto válido y una cantidad mayor a 0.";
     }
 });
+
