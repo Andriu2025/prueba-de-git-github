@@ -1,0 +1,33 @@
+/* Fondo para la sección Nosotros */
+#nosotros {
+  background-image: url("imagenes/rosca\ de\ reyes.png");
+  background-size: cover;         /* Hace que cubra todo */
+  background-position: center;    /* Centra la imagen */
+  background-attachment: fixed;   /* Efecto suave al scrollear */
+  padding: 80px 60px;
+  color: #fff;                    /* Letra blanca para que se vea */
+  text-shadow: 1px 1px 3px #000;  /* Hace que el texto no se pierda */
+  border-top: 3px solid #b7691d;
+  border-bottom: 3px solid #b7691d;
+}
+
+/* Fondo para la sección Contacto */
+#contacto {
+  background-image: url("imagenes/churros.png");
+  background-size: cover;
+  background-position: center;
+  padding: 80px 60px;
+  color: #fff;
+  text-shadow: 1px 1px 3px #000;
+  border-top: 3px solid #b7691d;
+  border-bottom: 3px solid #b7691d;
+}
+
+/* Para evitar que la imagen quede muy comprimida en pantallas chicas */
+#nosotros p,
+#contacto p {
+  max-width: 850px;
+  margin: auto;
+  font-size: 1.15em;
+  line-height: 1.6;
+}

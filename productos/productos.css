@@ -1,0 +1,313 @@
+/* ==== GENERAL ==== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #fff8e6;
+    color: #333;
+}
+
+/* ==== HEADER ==== */
+header {
+    background-color: #f7a33b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 25px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+/* ==== CONTADOR DEL CARRITO ==== */
+#contadorCarrito {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  background-color: #ff3b3b;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  transition: transform 0.2s ease;
+}
+
+/* que el botón carrito sea relativo para posicionar el circulito */
+.carrito-btn {
+  position: relative;
+  display: inline-block;
+}
+
+/* ==== LOGO ==== */
+.logo img {
+    height: 75px;
+    width: 75px;
+    object-fit: cover;
+    border-radius: 50%; /* HACE EL LOGO CIRCULAR */
+    background-color: #fff;
+    padding: 4px;
+    display: block;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s;
+}
+/* ==== BOTÓN CARRITO MEJORADO ==== */
+.carrito-btn {
+    display: inline-block;
+    padding: 6px 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.carrito-btn i {
+    color: #a85b0a;
+    font-size: 20px;
+    transition: transform 0.2s ease;
+}
+
+/* Animación suave al pasar el mouse */
+.carrito-btn:hover {
+    background-color: #ffe2b3;
+    transform: scale(1.05);
+}
+
+.carrito-btn:hover i {
+    transform: scale(1.25);
+}
+/*========*/
+nav ul li a:hover, nav ul li a.active {
+    color: #4b2e05;
+}
+
+
+/* ==== INICIO ==== */
+.inicio {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Fondo slider */
+.slider-fondo {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* LAS IMÁGENES VAN UNA POR VEZ */
+.slider-track {
+  display: flex;
+  height: 100%;
+  animation: sliderSuave 12s infinite ease-in-out;
+}
+
+.slider-track img {
+  min-width: 100%;   /* <- ESTA ES LA CLAVE */
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ANIMACIÓN CON PAUSA */
+@keyframes sliderSuave {
+  0%   { transform: translateX(0%); }       /* Imagen 1 */
+  25%  { transform: translateX(0%); }       /* Pausa */
+  
+  35%  { transform: translateX(-100%); }    /* Imagen 2 */
+  60%  { transform: translateX(-100%); }    /* Pausa */
+  
+  70%  { transform: translateX(-200%); }    /* Imagen 3 */
+  95%  { transform: translateX(-200%); }    /* Pausa */
+
+  100% { transform: translateX(0%); }       /* Vuelve a 1 suave */
+}
+
+
+
+/* Capa oscura */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenido {
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.contenido h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+}
+
+.contenido p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.contenido button {
+    background-color: #f7a33b;
+    border: none;
+    padding: 10px 25px;
+    color: white;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contenido button:hover {
+    background-color: #d7891a;
+}
+
+/* ==== SECCIONES ==== */
+section {
+    padding: 80px 60px;
+    text-align: center;
+}
+
+#productos {
+    background-color: #fff3d8;
+}
+
+#nosotros {
+    background-color: #ffe8b8;
+}
+
+#contacto {
+    background-color: #fff3d8;
+}
+
+/* ==== FOOTER ==== */
+footer {
+    background-color: #f7a33b;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    position: relative;
+    margin-top: 40px; /* esto queda */
+}
+
+/*  productos  */
+.categoria {
+    margin-bottom: 50px;
+}
+
+.categoria h3 {
+    font-size: 1.8em;
+    color: #a85b0a;
+    margin-bottom: 20px;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.producto {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.producto img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.producto h4 {
+    margin-top: 10px;
+    color: #a85b0a;
+}
+
+.producto p {
+    color: #333;
+    font-size: 0.95em;
+    margin-bottom: 10px;
+}
+
+.ver-precio {
+    background-color: #e2923b;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.ver-precio:hover {
+    background-color: #c8781e;
+}
+.seccion {
+  display: none;
+}
+
+.seccion.visible {
+  display: block;
+}
+/* ======== FIX GLOBAL FOOTER PEGADO AL FONDO ======== */
+
+html, body {
+  height: 100%;
+}
+
+#mainContent {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* página ocupa alto completo */
+}
+
+main,
+#carrito {
+  flex: 1; /* el contenido se estira y empuja el footer abajo */
+}
+
+footer {
+  margin-top: 0 !important;
+  position: relative !important;
+}

@@ -1,0 +1,98 @@
+/* ============================
+   SECCIÓN DE COMENTARIOS
+============================ */
+#comentarios {
+  background: #fff7e6;
+  padding: 40px;
+  text-align: center;
+}
+
+#comentarios h2 {
+  color: #b66300;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+.comentarios-form {
+  background: #ffe8b8;
+  border-radius: 15px;
+  padding: 20px;
+  width: 80%;
+  margin: 0 auto 40px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+textarea {
+  width: 100%;
+  height: 90px;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  resize: none;
+  font-size: 1em;
+}
+
+.clasificacion {
+  margin: 15px 0;
+  font-weight: bold;
+  color: #333;
+}
+
+.estrellas {
+  display: inline-block;
+  direction: rtl;
+}
+
+.estrellas input {
+  display: none;
+}
+
+.estrellas label {
+  font-size: 2em;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.estrellas input:checked ~ label,
+.estrellas label:hover,
+.estrellas label:hover ~ label {
+  color: gold;
+}
+
+button#btnEnviarComentario {
+  background: #ffb347;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button#btnEnviarComentario:hover {
+  background: #ff9933;
+}
+
+/* Lista de comentarios */
+.comentarios-lista {
+  background: #fff3d4;
+  border-radius: 10px;
+  padding: 20px;
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.comentario {
+  border-bottom: 1px solid #ffd18a;
+  padding: 10px 0;
+}
+
+.comentario:last-child {
+  border: none;
+}
+
+.comentario strong {
+  color: #b66300;
+}

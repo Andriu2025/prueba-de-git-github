@@ -1,0 +1,184 @@
+/* ======== SECCIÓN CARRITO ======== */
+#carrito {
+  background-color: #ffe8b8;      /* mismo tono beige del sitio */
+  padding: 100px 60px 80px;       /* deja espacio arriba y abajo */
+  text-align: center;
+  min-height: 85vh;               /* asegura que el footer quede abajo */
+  box-sizing: border-box;
+}
+
+#carritoItems div {
+  background: white;
+  margin: 15px auto;
+  width: 65%;
+  padding: 18px 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+#carritoItems strong {
+  font-size: 1.05em;
+  margin-right: 6px;
+}
+
+#carritoItems input[type="number"] {
+  width: 60px;
+  padding: 4px;
+  margin: 0 8px;
+  border: 1px solid #e2923b;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* Total del carrito */
+#carritoTotal {
+  margin-top: 25px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #3c2a1e;
+}
+
+/* Botones del carrito */
+#vaciarCarrito,
+#volverInicio {
+  background-color: #e2923b;
+  margin: 10px;
+  padding: 10px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+
+#vaciarCarrito:hover,
+#volverInicio:hover {
+  background-color: #d17c1d;
+}
+
+/* Título de la sección */
+#carrito h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #b7691d;
+  font-weight: 700;
+}
+
+/* Contenedor en dos columnas */
+#carritoFlex {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+/* Columna izquierda (productos) */
+#carritoItemsCol {
+  width: 55%;
+}
+
+/* Columna derecha (formulario) */
+#carritoDatos {
+  width: 35%;
+  background: #fff;
+  padding: 18px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.18);
+}
+
+#carritoDatos h3 {
+  text-align: center;
+  margin-bottom: 12px;
+  color: #b7691d;
+  font-weight: 700;
+}
+
+#carritoDatos label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+  color: #4b3a2a;
+}
+
+#carritoDatos input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border-radius: 6px;
+  border: 1px solid #e2923b;
+}
+
+/* Alineación correcta de cada item del carrito */
+#carritoItems div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Agrupa cantidad + botón */
+.itemAcciones {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Botón de eliminar */
+.botonEliminar {
+  background-color: #e2923b;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.botonEliminar:hover {
+  transform: scale(1.1);
+}
+.itemCarrito {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 8px 12px;
+  margin: 6px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.itemCarrito div:first-child {
+  flex: 1;
+}
+
+.itemCarrito strong {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 3px;
+}
+
+.itemCarrito input[type="number"] {
+  width: 50px;
+  padding: 3px;
+  border: 1px solid #888;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.btn-quitar {
+  background: #ffcd44;
+  border: none;
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.btn-quitar:hover {
+  background: #cc0000;
+}

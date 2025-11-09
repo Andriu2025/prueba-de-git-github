@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panadería Don Fermín - Acceso</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="carrito/carrito.css">
+    <link rel="stylesheet" href="productos/productos.css">
+    <link rel="stylesheet" href="comentarios.css">
+    <link rel="stylesheet" href="estadisticas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="contacto.css">
+</head>
+<body>
+   <!-- LOGIN / REGISTRO -->
+    <div class="container" id="loginContainer">
+        <div class="card" id="card">
+            <!-- Login -->
+            <div class="front">
+                <h2>Iniciar Sesión</h2>
+                <input type="text" placeholder="Usuario" id="loginUser">
+                <input type="password" placeholder="Contraseña" id="loginPass">
+                <button id="loginBtn">Entrar</button>
+                <p>¿No tienes cuenta? <a href="#" id="toRegister">Regístrate</a></p>
+            </div>
+
+            <!-- Registro -->
+            <div class="back">
+                <h2>Registrarse</h2>
+                <input type="text" placeholder="Usuario" id="regUser">
+                <input type="email" placeholder="Correo electrónico" id="regEmail">
+                <input type="password" placeholder="Contraseña" id="regPass">
+                <button id="registerBtn">Crear cuenta</button>
+                <p>¿Ya tienes cuenta? <a href="#" id="toLogin">Inicia sesión</a></p>
+            </div>
+        </div>
+    </div>
+
+     <!-- ======== CONTENIDO PRINCIPAL ======== -->
+<div id="mainContent" style="display: none;">
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <img src="imagenes/logo don fermin.png" alt="Logo Don Fermín">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#inicio" class="active">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#comentarios">Comentarios</a></li>
+        <li><a href="#" id="btnEstadisticas">Estadísticas</a></li>
+        <li><a href="#" id="mostrarCarrito" class="carrito-btn"><i class="fa-solid fa-cart-shopping"></i><span id="contadorCarrito">0</span> </a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- CONTENIDO CENTRAL -->
+  <main id="contenidoPrincipal">
+    <!-- SECCIÓN INICIO -->
+<section id="inicio" class="inicio">
+  
+  <!-- SLIDER -->
+  <div class="slider-fondo">
+    <div class="slider-track">
+      <img src="imagenes/portada-facturas.jpg">
+      <img src="imagenes/portada facturas2.png">
+      <img src="imagenes/portada facturas3.png">
+    </div>
+  </div>
+
+  <!-- CAPA NEGRA + TEXTO (NO TOCAR) -->
+  <div class="overlay">
+    <div class="contenido">
+      <h1>Bienvenido a Panadería Don Fermín</h1>
+      <p>Pan artesanal, fresco y hecho con amor ❤️</p>
+      <button id="verProductos">Ver productos</button>
+    </div>
+  </div>
+
+</section>
+
+
+    <!-- SECCIÓN PRODUCTOS -->
+    <section id="productos">
+      <h2>Nuestros Productos</h2>
+
+      <div class="categoria">
+        <h3>🥐 Dulces</h3>
+        <div class="productos-grid">
+          <div class="producto">
+            <img src="imagenes/medialuna.png" alt="Medialuna dulce">
+            <h4>Medialuna dulce</h4>
+            <p>Manteca, glaseado suave.</p>
+            <button class="ver-precio" data-nombre="Medialuna dulce" data-precio="700">Ver precio</button>
+            <button class="agregarCarrito" onclick="agregarAlCarrito('Medialuna dulce', 700)">Agregar al carrito</button>
+          </div>
+
+          <div class="producto">
+            <img src="imagenes/vigilantes.png" alt="Vigilante">
+            <h4>Vigilante</h4>
+            <p>Con dulce de membrillo y pastelera.</p>
+            <button class="ver-precio" data-nombre="Vigilante" data-precio="900">Ver precio</button>
+            <button class="agregarCarrito" onclick="agregarAlCarrito('Vigilante', 900)">Agregar al carrito</button>
+          </div>
+
+          <div class="producto">
+            <img src="imagenes/torta de coco.png" alt="Torta de coco">
+            <h4>Torta de coco</h4>
+            <p>Molde 26 cm, 12 porciones.</p>
+            <button class="ver-precio" data-nombre="Torta de coco" data-precio="6000">Ver precio</button>
+            <button class="agregarCarrito" onclick="agregarAlCarrito('Torta de coco', 6000)">Agregar al carrito</button>
+          </div>
+
+          <div class="producto">
+            <img src="imagenes/churros.png" alt="Churros">
+            <h4>Churros</h4>
+            <p>Con azúcar o rellenos de dulce de leche</p>
+            <button class="ver-precio" data-nombre="Churros" data-precio="300">Ver precio</button>
+            <button class="agregarCarrito" onclick="agregarAlCarrito('Churros',300)">Agregar al carrito</button>
+          </div>
+
+          <div class="producto">
+            <img src="imagenes/factura de crema.png" alt="factura de crema">
+            <h4>factura de crema</h4>
+            <p>Rellena de crema pastelera y a menudo con cereza</p>
+            <button class="ver-precio" data-nombre="factura de crema" data-precio="700">Ver precio</button>
+            <button class="agregarCarrito" onclick="agregarAlCarrito('factura de crema',700)">Agregar al carrito</button>
+          </div>
+
+          <div class="producto">
+            <img src="imagenes/rosca de reyes.png" alt="rosca de reyes">
+            <h4>Rosca de reyes</h4>
+            <p>Masa de brioche con frutas abrillantadas (típica de Reyes)</p>
+            <button class="ver-precio" data-nombre="rosca de reyes" data-precio="8000">Ver precio</button>
+            <button class="agregarCarrito" onclick="agregarAlCarrito('rosca de reyes',8000)">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="categoria">
+        <h3>🥖 Salados</h3>
+        <div class="productos-grid">
+          <div class="producto">
+            <img src="imagenes/pan frances.png" alt="Pan francés">
+            <h4>Pan francés (kg)</h4>
+            <p>Clásico, crujiente.</p>
+            <button class="ver-precio" data-nombre="Pan francés (kg)" data-precio="2000">Ver precio</button>
+            <button class="agregarCarrito" onclick="agregarAlCarrito('Pan francés (kg)', 2000)">Agregar al carrito</button>
+          </div>
+
+          <div class="producto">
+            <img src="imagenes/chipa.png" alt="Chipá">
+            <h4>Chipá (100g)</h4>
+            <p>En pequeñas bolsas, de queso.</p>
+            <button class="ver-precio" data-nombre="Chipá (100g)" data-precio="500">Ver precio</button>
+            <button class="agregarCarrito" onclick="agregarAlCarrito('Chipá (100g)', 500)">Agregar al carrito</button>
+          </div>
+
+          <div class="producto">
+            <img src="imagenes/sandwitch de miga.png" alt="Sándwich de miga">
+            <h4>Sándwich de miga</h4>
+            <p>Jamón y queso, lechuga y tomate, triple.</p>
+            <button class="ver-precio" data-nombre="Sándwich de miga" data-precio="1200">Ver precio</button>
+            <button class="agregarCarrito" onclick="agregarAlCarrito('Sándwich de miga', 1200)">Agregar al carrito</button>
+          </div>
+
+          <div class="producto">
+            <img src="imagenes/fosforito.png" alt="fosforito">
+            <h4>Fosforito</h4>
+            <p>Hojaldre delgado y rectangular, con jamón y queso</p>
+            <button class="ver-precio" data-nombre="Fosforito" data-precio="400">Ver precio</button>
+            <button class="agregarCarrito" onclick="agregarAlCarrito('Fosforito',400)">Agregar al carrito</button>
+          </div>
+
+          <div class="producto">
+            <img src="imagenes/libritos.png" alt="libritos">
+            <h4>Libritos</h4>
+            <p>crocante y muy salada</p>
+            <button class="ver-precio" data-nombre="Libritos" data-precio="300">Ver precio</button>
+            <button class="agregarCarrito" onclick="agregarAlCarrito('Libritos',300)">Agregar al carrito</button>
+          </div>
+
+          <div class="producto">
+            <img src="imagenes/biscochitos de grasa.png" alt="Biscochitos de grasa">
+            <h4>Biscochitos de grasa</h4>
+            <p>galletas tipicas y caseras</p>
+            <button class="ver-precio" data-nombre="Biscochitos de grasa" data-precio="200">Ver precio</button>
+            <button class="agregarCarrito" onclick=" agregarAlCarrito('Biscochitos de grasa',200)">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN NOSOTROS -->
+    <section id="nosotros">
+      <h2>Sobre Nosotros</h2>
+      <p>Desde hace más de 20 años, <strong>Don Fermín</strong> elabora pan artesanal en el corazón del barrio.
+        Nuestra panadería nació con una idea simple: recuperar el sabor del pan de antes, hecho con paciencia y dedicación.
+        Usamos recetas tradicionales y productos frescos de la región, ofreciendo a cada vecino una experiencia cálida y auténtica.
+        Cada día, el aroma a pan recién horneado sigue siendo nuestra mejor carta de presentación.</p>
+    </section>
+
+    <!-- SECCIÓN CONTACTO -->
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>📞 Tel: (02267) 55-1234</p>
+      <p>📍 Dirección: Belgrano 333, General Madariaga</p>
+      
+    </section>
+
+    <!-- SECCIÓN COMENTARIOS -->
+    <section id="comentarios">
+      <h2>Dejanos tu opinión</h2>
+
+      <div class="comentarios-form">
+        <h3>Tu experiencia</h3>
+
+        <textarea id="comentarioTexto" placeholder="Escribí tu comentario aquí..."></textarea>
+
+        <div class="clasificacion">
+          <span>Calificación:</span>
+          <div class="estrellas">
+            <input type="radio" name="estrella" id="estrella5" value="5"><label for="estrella5">★</label>
+            <input type="radio" name="estrella" id="estrella4" value="4"><label for="estrella4">★</label>
+            <input type="radio" name="estrella" id="estrella3" value="3"><label for="estrella3">★</label>
+            <input type="radio" name="estrella" id="estrella2" value="2"><label for="estrella2">★</label>
+            <input type="radio" name="estrella" id="estrella1" value="1"><label for="estrella1">★</label>
+          </div>
+        </div>
+
+        <button id="btnEnviarComentario">Agregar comentario</button>
+      </div>
+
+      <div class="comentarios-lista" id="comentariosLista">
+        <h3>Comentarios recientes</h3>
+      </div>
+    </section>
+  </main>
+
+<!-- SECCIÓN CARRITO -->
+<section id="carrito" style="display:none;">
+  <h2>🛒 Carrito de compras</h2>
+
+  <!-- CONTENEDOR EN DOS COLUMNAS -->
+  <div id="carritoFlex">
+    
+    <!-- COLUMNA IZQUIERDA: ITEMS -->
+    <div id="carritoItemsCol">
+      <div id="carritoItems"></div>
+      <p id="carritoTotal">Total: $0</p>
+
+      <!-- ✅ Botones reubicados -->
+      <div id="carritoBotones">
+        <button id="vaciarCarrito">Vaciar carrito</button>
+        <button id="comprarCarrito">Comprar</button>
+        <button id="volverInicio">Volver al inicio</button>
+      </div>
+
+    </div>
+
+    <!-- COLUMNA DERECHA: FORMULARIO -->
+    <div id="carritoDatos">
+      <h3>Datos del pedido</h3>
+
+      <label>Nombre y Apellido:</label>
+      <input type="text" id="nombreComprador" placeholder="Ej: Juan Pérez">
+
+      <label>Dirección:</label>
+      <input type="text" id="direccionComprador" placeholder="Ej: Calle 123 - Barrio Centro">
+    </div>
+
+  </div>
+</section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Panadería Don Fermín — Sitio desarrollado por Andrés Chacón Mancilla Gregorio</p>
+  </footer>
+</div>
+
+
+
+<!-- SECCIÓN ESTADÍSTICAS -->
+<section id="estadisticasPanel" style="display:none;">
+  <h2>📊 Estadísticas generales</h2>
+  <button id="cerrarEstadisticas">Volver al inicio</button>
+
+  <div class="grafico-box">
+    <h3>Ventas por mes $</h3>
+    <canvas id="graficoVentas"></canvas>
+  </div>
+
+  <div class="grafico-box">
+    <h3>Valoraciones</h3>
+    <canvas id="graficoValoraciones"></canvas>
+  </div>
+
+  <hr style="margin: 30px 0;">
+
+<h3 style="text-align:center;">📜 Historial de Compras</h3>
+
+<div id="historialCompras"></div>
+
+</section>
+
+
+
+
+<!-- Chart.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Tus otros scripts (carrito, productos, comentarios...) -->
+<script src="script.js" defer></script>
+<script src="carrito/carrito.js" defer></script>
+<script src="productos/productos.js" defer></script>
+<script src="comentarios.js" defer></script>
+
+<!-- Estadísticas (después de Chart.js) -->
+<script src="estadisticas.js" defer></script>
+
+
+</body>
+</html>
