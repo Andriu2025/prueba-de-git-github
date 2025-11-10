@@ -7,7 +7,7 @@ valoraciones de clientes y visualización de estadísticas.
 El sistema está pensado para uso interno de la panadería (dueño y personal), aunque el catálogo es visible para cualquier usuario.
 
 ## 📂 Estructura del proyecto
-
+```
 panaderia/
 ├── pan.html
 ├── estilo.css
@@ -37,7 +37,7 @@ panaderia/
   ├── portada facturas3.jpg
   ├── medialuna.png
   └── ...
-
+```
 ## 🛠️ Tecnologías utilizadas
 - **HTML5**: Estructura de las páginas y secciones
 - **CSS3**: Diseño visual, animaciones y estilos responsivos
